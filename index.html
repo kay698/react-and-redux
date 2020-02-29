@@ -17,15 +17,28 @@
         class App extends React.Component {
 
           state = {
-            name = 'kel',
-            age = 24
+            name : 'kel',
+            age : 24
+          };
+
+          handleClick = (e) =>{
+            console.log(e.target)
+            console.log(this.state.age)
+          }
+          handleMouseOver(e){
+            console.log(e.target, e.pageX)
+          }
+          handleCopy(e){
+            alert('really!!')
           }
           render() {
             return(
               <div className = "app-content">
                 <h1>Hey,Hey</h1>
                 <p>my name is {this.state.name}, i am {this.state.age} years old</p>
-                
+                <button onClick = {this.handleClick}>click me</button>
+                <button onMouseOver = {this.handleMouseOver}>Hover me</button>
+                <p onCopy = {this.handleCopy}>hello</p>
               </div>
             )
           }
