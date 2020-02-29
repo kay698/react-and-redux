@@ -23,7 +23,10 @@
 
           handleClick = (e) =>{
             console.log(e.target)
-            console.log(this.state.age)
+            console.log(this.state.age)//will only work in this funxyion because its an arrow key function
+            this.setState({
+              name : 'kelly'
+            })
           }
           handleMouseOver(e){
             console.log(e.target, e.pageX)
